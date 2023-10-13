@@ -56,7 +56,7 @@ ul, ol {
     color: lightgray
 }
 
-.profile-grid{
+.tom-profile-grid, .mingfei-profile-grid{
     display: grid;
     margin: 20px 40px 20px 40px;
     grid-template-columns: 1fr 3fr;
@@ -68,17 +68,29 @@ ul, ol {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 20px;
+    transition: 0.25s;
+}
+.profile-grid:hover{
+    background-color:rgb(247, 222, 84);
+    cursor:pointer;
+}
+.tom-profile-grid:hover .tom-grid-photo{
+    width: 100px
+}
+.mingfei-profile-grid:hover .mingfei-grid-photo{
+    width: 100px
 }
 .profile-grid div{
     display:flex;
     justify-content: center;
     align-items: center;
 }
-
-.grid-photo{
+.tom-grid-photo, .mingfei-grid-photo{
+    transition: 0.25s;
     width: 60px;
     border: none;
 }
+
 @media screen and (min-width: 1000px) {
     .profile-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr; 
