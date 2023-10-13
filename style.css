@@ -16,6 +16,8 @@ header{
 }
 img{
     width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 200px;
     border: 3px solid darkgreen;
 }
@@ -59,11 +61,20 @@ ul, ol {
     border: none;
 }
 
+@media screen and (max-width: 750px) {
+    .profile-grid {
+        grid-template-columns: 1fr; 
+    }
+}
 
-
-
-
-
+@media screen and (max-width: 480px) {
+    .grid-photo {
+        width: 100%; 
+    }
+    .profile-description {
+        font-size: 8px; 
+    }
+}
 
 
 
