@@ -30,3 +30,24 @@ ul, ol {
     margin-bottom: 40px;
 }
 
+.profile-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    padding:20px;
+    border:40px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
