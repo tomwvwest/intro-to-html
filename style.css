@@ -1,9 +1,20 @@
-body{
-    background-color: rgb(165, 224, 205);
-    /* margin: 20px; */
-    height: 1500px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+body {
+    background-image: linear-gradient(rgb(0, 98, 255), rgb(5, 234, 247));
+    background-repeat: no-repeat; /* Add this line to prevent repeating */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+    animation: animation 1s infinite;
 }
+
+@keyframes animation {
+    0% {
+        background-position: top;
+    }
+    100% {
+        background-position: bottom;
+    }
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
@@ -15,21 +26,22 @@ header{
     display:flex;
 }
 img{
-    width: 300px;
+    width: 250px;
     max-width: 100%;
     height: auto;
     border-radius: 200px;
-    border: 3px solid darkgreen;
+    border: 3px solid lightgray;
 }
 
 h1, h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 10px 20px 0px 20px;
-   
+    color: lightgray
 }
 
 p{
     padding-left: 20px;
+    color: lightgray
 }
 
 a{
@@ -41,11 +53,12 @@ a{
 ul, ol {
     color: rgb(105, 78, 44); 
     margin-bottom: 40px;
+    color: lightgray
 }
 
 .profile-grid{
     display: grid;
-    margin-top: 20px;
+    margin: 20px 40px 20px 40px;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto auto;
     grid-gap: 30px;
@@ -53,17 +66,36 @@ ul, ol {
     border-radius: 10px;
     border:2px solid black;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgba(255, 255, 255, 0.6)
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+}
+.profile-grid div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-photo{
     width: 60px;
     border: none;
 }
-
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 1000px) {
     .profile-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        font-size: 25px;
+        
+    }
+    .profile-grid div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+        font-size: 18px;
     }
 }
 
@@ -71,9 +103,7 @@ ul, ol {
     .grid-photo {
         width: 100%; 
     }
-    .profile-description {
-        font-size: 8px; 
-    }
+    
 }
 
 
